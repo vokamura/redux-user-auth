@@ -6,14 +6,6 @@ import { signIn, signOut } from '../../actions';
 
 class Nav extends Component {
 
-    renderAuthButton(){
-        const { auth, signIn, signOut } = this.props;
-        if(auth){
-            return <button onClick={signOut} className="btn btn-outline-danger">Sign Out</button>
-        }
-        return <button onClick={signIn} className="btn btn-outline-primary">Sign In</button>
-    }
-
     render(){
         return(
             <NavContainer>
@@ -33,7 +25,7 @@ class Nav extends Component {
                     <NavLink className="nav-link" to="/movie-quote">Movie Quote</NavLink>
                 </li>  
                 <li className="nav-item">
-                    {this.renderAuthButton()}
+                    <NavLink className="nav-link" to="/sign-up">Sign Up</NavLink>
                 </li>
             </NavContainer>
         );
